@@ -1,3 +1,7 @@
 praveen 
 belgavi
 AIT Bengaluru
+to create file vi v1.txt
+to insert in the file - I
+to save  - esc + shift+: + wq 
+
