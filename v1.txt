@@ -1,7 +1,21 @@
-praveen 
-belgavi
-AIT Bengaluru
 to create file vi v1.txt
 to insert in the file - I
 to save  - esc + shift+: + wq 
+
+git init
+git add .
+git commit -m "message"
+git push origin master
+
+
+git branch -D feature-branch
+git checkout feature-branch
+git push origin feature-branch
+git add p1.txt
+git commit -m "new branch created p1.txt"
+git checkout master
+git push origin feature-branch
+git merge feature-branch
+git add p1.txt
+git push origin master
 
