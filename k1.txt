@@ -1,1 +1,244 @@
-new line testing
+$ git remote add origin https://github.com/VENOM-18/GITDSECTION.git
+error: remote origin already exists.
+
+Praveen@LAPTOP-2VJG4NN4 MINGW64 /d/GitDDemo (master)
+$ git checkout -b master
+Switched to a new branch 'master'
+
+Praveen@LAPTOP-2VJG4NN4 MINGW64 /d/GitDDemo (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+Praveen@LAPTOP-2VJG4NN4 MINGW64 /d/GitDDemo (master)
+$ git fetch origin
+remote: Enumerating objects: 29, done.
+remote: Counting objects: 100% (29/29), done.
+remote: Compressing objects: 100% (20/20), done.
+remote: Total 29 (delta 4), reused 27 (delta 2), pack-reused 0 (from 0)
+Unpacking objects: 100% (29/29), 2.70 KiB | 26.00 KiB/s, done.
+From https://github.com/VENOM-18/GITDSECTION
+ * [new branch]      feature-branch -> origin/feature-branch
+ * [new branch]      master         -> origin/master
+ * [new branch]      user1          -> origin/user1
+ * [new branch]      user2          -> origin/user2
+ * [new branch]      user5          -> origin/user5
+
+Praveen@LAPTOP-2VJG4NN4 MINGW64 /d/GitDDemo (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+Praveen@LAPTOP-2VJG4NN4 MINGW64 /d/GitDDemo (master)
+$ git clone https://github.com/VENOM-18/GITDSECTION.git
+Cloning into 'GITDSECTION'...
+remote: Enumerating objects: 29, done.
+remote: Counting objects: 100% (29/29), done.
+remote: Compressing objects: 100% (20/20), done.
+remote: Total 29 (delta 4), reused 27 (delta 2), pack-reused 0 (from 0)
+Receiving objects: 100% (29/29), done.
+Resolving deltas: 100% (4/4), done.
+
+Praveen@LAPTOP-2VJG4NN4 MINGW64 /d/GitDDemo (master)
+$ git checkout user1
+Switched to a new branch 'user1'
+branch 'user1' set up to track 'origin/user1'.
+
+Praveen@LAPTOP-2VJG4NN4 MINGW64 /d/GitDDemo (user1)
+$ git fetch origin
+
+Praveen@LAPTOP-2VJG4NN4 MINGW64 /d/GitDDemo (user1)
+$ git clone user1
+fatal: repository 'user1' does not exist
+
+Praveen@LAPTOP-2VJG4NN4 MINGW64 /d/GitDDemo (user1)
+$ git fetch origin
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 1.01 KiB | 172.00 KiB/s, done.
+From https://github.com/VENOM-18/GITDSECTION
+   4ed3aaa..251e3fc  user1      -> origin/user1
+
+Praveen@LAPTOP-2VJG4NN4 MINGW64 /d/GitDDemo (user1)
+$ git checkout user1
+Already on 'user1'
+Your branch is behind 'origin/user1' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Praveen@LAPTOP-2VJG4NN4 MINGW64 /d/GitDDemo (user1)
+$ git fetch origin
+
+Praveen@LAPTOP-2VJG4NN4 MINGW64 /d/GitDDemo (user1)
+$ git fetch origin
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 1016 bytes | 145.00 KiB/s, done.
+From https://github.com/VENOM-18/GITDSECTION
+   7261939..5d89da6  master     -> origin/master
+
+Praveen@LAPTOP-2VJG4NN4 MINGW64 /d/GitDDemo (user1)
+$ git checkout master
+Switched to a new branch 'master'
+branch 'master' set up to track 'origin/master'.
+
+Praveen@LAPTOP-2VJG4NN4 MINGW64 /d/GitDDemo (master)
+$ git fetch origin
+
+Praveen@LAPTOP-2VJG4NN4 MINGW64 /d/GitDDemo (master)
+$ git checkout user1
+Switched to branch 'user1'
+Your branch is behind 'origin/user1' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Praveen@LAPTOP-2VJG4NN4 MINGW64 /d/GitDDemo (user1)
+$ git fetch origin
+
+Praveen@LAPTOP-2VJG4NN4 MINGW64 /d/GitDDemo (user1)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+Praveen@LAPTOP-2VJG4NN4 MINGW64 /d/GitDDemo (master)
+$ git fetch origin
+
+Praveen@LAPTOP-2VJG4NN4 MINGW64 /d/GitDDemo (master)
+$ git checkout user1
+Switched to branch 'user1'
+Your branch is behind 'origin/user1' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Praveen@LAPTOP-2VJG4NN4 MINGW64 /d/GitDDemo (user1)
+$ git fetch origin
+
+Praveen@LAPTOP-2VJG4NN4 MINGW64 /d/GitDDemo (user1)
+$ git rebase origin/user1
+Successfully rebased and updated refs/heads/user1.
+
+Praveen@LAPTOP-2VJG4NN4 MINGW64 /d/GitDDemo (user1)
+$ git rebase origin/user1
+Current branch user1 is up to date.
+
+Praveen@LAPTOP-2VJG4NN4 MINGW64 /d/GitDDemo (user1)
+$ git tag versionname
+
+Praveen@LAPTOP-2VJG4NN4 MINGW64 /d/GitDDemo (user1)
+$ git tag v1.0
+
+Praveen@LAPTOP-2VJG4NN4 MINGW64 /d/GitDDemo (user1)
+$ git show 5d89da6
+commit 5d89da64843d12e22d1771017e526ce9a0dc34d9 (origin/master, master)
+Author: VENOM-18 <praveena.24.becs@acharya.ac.in>
+Date:   Tue Sep 24 11:32:00 2024 +0530
+
+    new line Update k1.txt
+
+diff --git a/k1.txt b/k1.txt
+index cc3952a..10d2bb4 100644
+--- a/k1.txt
++++ b/k1.txt
+@@ -1,2 +1 @@
+-hello
+-new k new file
++new line testing
+
+Praveen@LAPTOP-2VJG4NN4 MINGW64 /d/GitDDemo (user1)
+$
+
+Praveen@LAPTOP-2VJG4NN4 MINGW64 /d/GitDDemo (user1)
+$ git show 5d89da6
+commit 5d89da64843d12e22d1771017e526ce9a0dc34d9 (origin/master, master)
+Author: VENOM-18 <praveena.24.becs@acharya.ac.in>
+Date:   Tue Sep 24 11:32:00 2024 +0530
+
+    new line Update k1.txt
+
+diff --git a/k1.txt b/k1.txt
+index cc3952a..10d2bb4 100644
+--- a/k1.txt
++++ b/k1.txt
+@@ -1,2 +1 @@
+-hello
+-new k new file
++new line testing
+
+Praveen@LAPTOP-2VJG4NN4 MINGW64 /d/GitDDemo (user1)
+$ git show 5d89da6
+commit 5d89da64843d12e22d1771017e526ce9a0dc34d9 (origin/master, master)
+Author: VENOM-18 <praveena.24.becs@acharya.ac.in>
+Date:   Tue Sep 24 11:32:00 2024 +0530
+
+    new line Update k1.txt
+
+diff --git a/k1.txt b/k1.txt
+index cc3952a..10d2bb4 100644
+--- a/k1.txt
++++ b/k1.txt
+@@ -1,2 +1 @@
+-hello
+-new k new file
++new line testing
+
+Praveen@LAPTOP-2VJG4NN4 MINGW64 /d/GitDDemo (user1)
+$ git log -n 1 5d89da6
+commit 5d89da64843d12e22d1771017e526ce9a0dc34d9 (origin/master, master)
+Author: VENOM-18 <praveena.24.becs@acharya.ac.in>
+Date:   Tue Sep 24 11:32:00 2024 +0530
+
+    new line Update k1.txt
+
+Praveen@LAPTOP-2VJG4NN4 MINGW64 /d/GitDDemo (user1)
+$ git tag v1.0
+fatal: tag 'v1.0' already exists
+
+Praveen@LAPTOP-2VJG4NN4 MINGW64 /d/GitDDemo (user1)
+$ git log -n 1 5d89da6
+commit 5d89da64843d12e22d1771017e526ce9a0dc34d9 (origin/master, master)
+Author: VENOM-18 <praveena.24.becs@acharya.ac.in>
+Date:   Tue Sep 24 11:32:00 2024 +0530
+
+    new line Update k1.txt
+
+Praveen@LAPTOP-2VJG4NN4 MINGW64 /d/GitDDemo (user1)
+$ git log -n 5 5d89da6
+commit 5d89da64843d12e22d1771017e526ce9a0dc34d9 (origin/master, master)
+Author: VENOM-18 <praveena.24.becs@acharya.ac.in>
+Date:   Tue Sep 24 11:32:00 2024 +0530
+
+    new line Update k1.txt
+
+commit 72619393893aadb72dac231fec5fe6876bf0bacf
+Author: VENOM-18 <pravena.24.becs@acharya.ac.in>
+Date:   Tue Sep 17 11:42:47 2024 +0530
+
+    new file added
+
+commit 4ed3aaaeab819586b0dc78f8da307ba7856ce4cc (origin/user2)
+Author: VENOM-18 <pravena.24.becs@acharya.ac.in>
+Date:   Tue Sep 17 11:03:56 2024 +0530
+
+    file eddited
+
+commit c59d74a7ec00dee5e781d1493894455d03fdf372
+Author: VENOM-18 <pravena.24.becs@acharya.ac.in>
+Date:   Fri Sep 13 10:11:44 2024 +0530
+
+    p2 file is created
+
+commit b51c320ae53acb561d09c8d6fa3fab4bd543e500 (origin/feature-branch)
+Author: VENOM-18 <pravena.24.becs@acharya.ac.in>
+Date:   Fri Sep 13 09:41:25 2024 +0530
+
+    new branch created p1.txt
+
+Praveen@LAPTOP-2VJG4NN4 MINGW64 /d/GitDDemo (user1)
+$
